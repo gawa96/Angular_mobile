@@ -1,0 +1,9 @@
+<div class ="container">
+  <ul class="notes">
+      <div *ngFor="let OneNote of notes"> 
+	  <ion-list>
+      <noteHandler [note]= "OneNote" [categories] = "categories" (saveNote)="saveNote()"></noteHandler>
+	  </ion-list>
+    </div>
+  </ul>
+</div>
