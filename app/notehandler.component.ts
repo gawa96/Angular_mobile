@@ -20,5 +20,6 @@ export class NotehandlerComponent  {
 	closeModify(note:Note){
 		this.modifying = false;
 		this.SaveNote.emit(note);
+		
 	}
 }

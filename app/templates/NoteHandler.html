@@ -1,20 +1,21 @@
-     <div  class="row">
-        <div class ="panel panel-default">
-    			<div class="panel-heading">                   
-       				<h2> {{note.title}} <small>{{note.category.label}}</small> </h2>
-    			</div>
+	<ion-card>
+		<ion-item>
+		<ion-card-header>
+			<h1>{{note.title}} <small>{{note.category.label}}</small></h1>
+		</ion-card-header>
+		<ion-card-content>{{note.content}}</ion-card-content>
+		<button ion-button (click)="modifying=true" *ngIf="!modifying">Modifier</button>
+		<em>{{note.date}}</em>
+		</ion-item>
 
-    			<div class="panel-body">{{note.content}}</div>
-    				<div class="panel-footer">
-        				<button ion-button (click)="modifying=true">Modifier</button>
 
-        				<!--<button class="btn btn-danger"(click)="DelNote(OneNote)">Supprimer</button>-->
-        				<em>{{note.date}}</em>
-            </div>
-    	</div>
-     </div>  
+
+
+			<!--<button class="btn btn-danger"(click)="DelNote(OneNote)">Supprimer</button>-->
+
+
      <!-- dans cette partie on on appel le note editor si on veux edite un texte. on envoie la note dans variable noteEdit-->  
     <div *ngIf="modifying">   
     <noteeditor [noteEdit]="note" [categories] = "categories" (closeModify)="closeModify()"></noteeditor>
-    <br/>
-    </div>
+	</div>
+	</ion-card>

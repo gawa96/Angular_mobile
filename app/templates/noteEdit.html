@@ -1,24 +1,21 @@
-<div class="row">
-	<ion-list>
-		<label> Titre </label>
-		<input [(ngModel)]="noteEdit.title" type="text" class="form-control">
-	</ion-list>
-	<ion-list>
-		<label> Contenu </label>
-		<input [(ngModel)]="noteEdit.content" type="text" class="form-control">
-	</ion-list>
-	<ion-list>
-		<ion-label> Catégorie </ion-label>
-		<select  [(ngModel)]="noteEdit.category"> 
-			<option *ngFor="let category of categories"  [ngValue]="category">{{category.label}}</option>
-		</select>
-	</ion-list>
-	
-	<ion-list>
-	<div>
-				<button ion-button (click)="SaveNote(noteEdit)"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; sauver</button>
-	</div>
-	
-	</ion-list>
 
-</div>
+ <ion-list>
+	<ion-item>
+		<ion-label></ion-label>
+		<ion-input type="text" [(ngModel)]="noteEdit.title" > </ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label></ion-label>
+		<ion-input type="text" [(ngModel)]="noteEdit.content" ></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label> Catégorie </ion-label>
+		<ion-select  [(ngModel)]="noteEdit.category"> 
+			<ion-option *ngFor="let category of categories"  [value]="category">{{category.label}}</ion-option>
+		</ion-select>
+	</ion-item>
+	<ion-item>	
+				<button ion-button (click)="SaveNote(noteEdit)"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; sauver</button>
+	</ion-item>
+</ion-list>

@@ -4,8 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 import { addNotePage } from '../pages/Add_note/add_note';
+import { AddCategoryPage } from '../pages/add_category/add_category';
 import { NoteComponent } from './note.component';
 import { NotehandlerComponent } from './notehandler.component';
 import { NoteEditorComponent } from './noteEditor.component';
@@ -17,8 +18,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+
 	addNotePage,
+	AddCategoryPage,
 	NoteComponent,
 	NotehandlerComponent,
 	NoteEditorComponent,
@@ -32,8 +34,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-	addNotePage
+
+	addNotePage,
+	AddCategoryPage
   ],
   providers: [
     StatusBar,
